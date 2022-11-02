@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Joe Biden
+    </title>
+</head>
+<body>
+    <script>
+        /*
+        //obiekt typu string
+        let tekst = "Ala ma kota";
+        let tekst2 = new String ("Ala ma kota");
+
+document.write (tekst + "<br>")
+        document.write ("zmienna tekst ma dlugosc" + tekst.length + "<br>")
+        document.write (tekst.substring(7,11) + "<br>")
+        document.write(tekst.toUpperCase() + "<br>")
+        document.write(tekst.toLowerCase() + "<br>")
+
+        //obiekt typu array
+        let tab1 = [];
+        let tab2 = new Array();
+        tab1[0] = 4;       
+        tab1[1] = 1;   
+        tab1[2] = 5;    
+
+        for(let i = 0; i < tab1.length; i++)
+        {
+            document.write(tab1[i] + ", ");
+            document.write("<br>");
+
+            document.write(tab1.join() + "<br>");
+        }
+
+        //obiekt typu Date
+        let data = new Date();
+            document.write(data.toString() + "<br/>");
+            document.write("Rok: " + data.getFullYear() + "<br/>");
+            document.write("Miesiąc: " + data.getMonth() + "<br/>");
+            document.write("Dzień tygodnia: " + data.getDay() + "<br/>"); //dzień tygodnia
+            document.write("Dzień miesiąca: " + data.getDate() + "<br/>");
+            document.write("Godzina: " + data.getHours() + "<br/>");
+            document.write("Minuta: " + data.getMinutes() + "<br/>");
+            document.write("Sekunda " + data.getSeconds() + "<br/>");
+            document.write("Milisekunda: " + data.getMilliseconds() + "<br/>");
+        */
+    function Data(data)
+    {
+         data = new Date();
+
+         miesiac = data.getDay() - 1
+////////////////////////////////////////////////////////////////////////////
+        var godzina
+        if(data.getHours < 10)
+         godzina = "0" + data.getHours()
+        else
+        godzina = data.getHours()
+/////////////////////////////////////////////////////////////////////////////
+        var minuta = "0"
+        if(data.getMinutes() < 10)
+        
+        minuta = "0" + data.getMinutes()
+        else
+        minuta = data.getMinutes()
+///////////////////////////////////////////////////////////////////////////
+        var sekunda = "0"
+        if(data.getSeconds() < 10)
+        
+        sekunda = "0" + data.getSeconds()
+        else
+        sekunda = data.getSeconds()
+///////////////////////////////////////////////////////////////////////////
+        var miesiac
+        if(miesiac < 10)
+        miesiac = "0" + miesiac
+       
+
+            let tab = ["styczen", "luty", "marzec", "kwiecien", "maj", "czerwiec", "lipiec", "sierpien", "wrzesien", "pazdzienik", "listopad", "grudzien"]
+            let tab2 = ["poniedzialek", "wtorek", "sroda", "czwartek", "piatek"]
+            document.write("Data: " + tab2[data.getDay()] + " " + miesiac + " " + tab[data.getMonth()] + " " + data.getFullYear() + "<br/>");
+            document.write("godzina: " + godzina + ":" + minuta + ":" + sekunda + "<br/>")
+            
+    }
+        Data()
+    </script>
+</body>
+</html>

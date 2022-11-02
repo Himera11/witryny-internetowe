@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+
+    </title>
+</head>
+<body>
+    <script>
+       /* var liczba = 0;
+        while (liczba != 10000)
+{
+      liczba = liczba + 1;
+      liczba ++;
+        document.write(liczba+ "<br>");
+        
+}
+
+        var liczba = 1;
+        var mnoznik = 1;
+        while(liczba <= 9)
+        {
+            while(mnoznik <= 9)
+            {
+                wynik = liczba * mnoznik;
+                document.write (liczba + " * " + mnoznik + "=" + wynik + "<br>")
+                mnoznik = mnoznik + 1;
+            }
+            document.write("<br>");
+            mnoznik = 1;
+            liczba = liczba + 1;
+        }
+*/
+function parzysta(liczba)
+{
+        var liczba;
+        if(liczba % 2 == 0)
+        document.write("liczba jest parzysta");
+        else
+        document.write("liczba jest nieparzysta")
+}
+        parzysta(2)  
+        document.write("<br>");
+        parzysta(3)
+        document.write("<br>");
+
+        function rowne(liczba1, liczba2)
+        {
+            
+            if(liczba1 == liczba2)
+            document.write("liczby sa równe")
+            else
+            document.write("liczby nie są równe")
+            document.write("<br>");
+            
+
+            if(liczba1 === liczba2)
+            document.write("liczby sa identyczne")
+            else
+            document.write("liczby nie są identyczne")
+        }
+        rowne(2, 2)
+        document.write("<br>");
+
+        rowne("abc", "ab")
+        document.write("<br>");
+        
+        
+        function checkDay(number) 
+        {
+            var number = 2;
+            switch (number) 
+            {
+                case 0:
+                case 7: document.write("jest niedziela </br/>");
+                    break;
+                case 1: document.write("jest poniedzialek <br/>");
+                    break;
+                case 2: document.write("jest wtorek <br/>");
+                    break;
+                case 3: document.write("jest środa <br/>");
+                    break;
+                case 4: document.write("jest czwartek <br/>");
+                    break;
+                case 5: document.write("jest piatek <br/>");
+                    break;
+                case 6: document.write("jest sobota <br/>");
+                    break;
+                default: document.write("podales zla liczbe lub parametr");
+                    break;
+            }
+        }
+        checkDay();
+
+
+        function liczbadec(dec)
+        {
+            var tmpdec = dec;
+            
+            var strbin = ("")
+            while(tmpdec > 0)
+            {
+                var rest = tmpdec % 2;
+                tmpdec = parseInt(tmpdec / 2)
+                strbin = rest + strbin;
+            }
+            document.write(strbin + "<br>")
+        }
+        liczbadec(6)
+        
+    </script>
+</body>
+</html>
