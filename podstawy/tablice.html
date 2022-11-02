@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+
+    </title>
+</head>
+<body>
+
+    <script>
+        let tab = [5];
+        tab[0] = 666666;
+        tab[1] = 5;
+        tab[2] = 809;
+        tab[3] = 8;
+        console.log(tab[0]);
+        document.write(tab[2])
+
+        for(var i = 0; i < 4; i++)
+        {
+            document.write(tab[i] + "<br>")
+        }
+
+        function przekazanietablicy(paramTab)
+        {
+            let aktMax = paramTab[0];
+            for(let i = 0; i < paramTab[5]; i++)
+            {
+                if(aktMax < paramTab[i])
+                {
+                    aktMax = paramTab[i]
+                }
+            }
+            document.write("najwieksze jest: " + aktMax + "<br>")
+        }
+        przekazanietablicy(tab)
+
+        function parametryshow(pl1, pl2)
+        {
+            document.write(pl1 + "<br>")
+            document.write(pl2 + "<br>")
+
+            document.write("wysietl wsyzstkie parametry: " + "<br>")
+            for(let i = 0; i < arguments.length; i++)
+            document.write(arguments[i] + "<br>")
+        }
+        parametryshow(15, "ALA")
+      //  parametryshow("ALA")
+        parametryshow(15, "ALA", 46)
+       // parametryshow()
+
+    </script>
+</body>
+</html>
