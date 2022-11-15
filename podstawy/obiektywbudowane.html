@@ -45,6 +45,7 @@ document.write (tekst + "<br>")
             document.write("Sekunda " + data.getSeconds() + "<br/>");
             document.write("Milisekunda: " + data.getMilliseconds() + "<br/>");
         */
+////////////////////////////////////////////////////////////////////////////
     function Data(data)
     {
          data = new Date();
@@ -77,8 +78,8 @@ document.write (tekst + "<br>")
        
 
             let tab = ["styczen", "luty", "marzec", "kwiecien", "maj", "czerwiec", "lipiec", "sierpien", "wrzesien", "pazdzienik", "listopad", "grudzien"]
-            let tab2 = ["poniedzialek", "wtorek", "sroda", "czwartek", "piatek"]
-            document.write("Data: " + tab2[data.getDay()] + " " + miesiac + " " + tab[data.getMonth()] + " " + data.getFullYear() + "<br/>");
+            let tab2 = ["","poniedzialek", "wtorek", "sroda", "czwartek", "piatek"]
+            document.write("Data: " + "<br/>" + tab2[data.getDay()] + " " + miesiac + " " + tab[data.getMonth()] + " " + data.getFullYear() + "<br/>");
             document.write("godzina: " + godzina + ":" + minuta + ":" + sekunda + "<br/>")
             
     }
