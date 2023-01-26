@@ -63,6 +63,11 @@ td {
     margin:40px;
     padding: 10px;
 }
+.samochod1:hover{
+    border-style: dotted;
+    border-width: 1px;
+    border-color: yellowgreen;
+}
 
 .seltab
 {
