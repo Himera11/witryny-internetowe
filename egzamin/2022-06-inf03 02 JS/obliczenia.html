@@ -11,9 +11,12 @@
         <h1>Całodobowa stacja paliw</h1>
     </div>
     <div class = "menu">
-    <img src="home.png" width="80px" >
-    <a href="stacja.html"><img src="znak.png" width="80px"></a>
+    <img class="znak1" src="home.png" width="80px" >         
+    <a href="stacja.html"><img class="znak1" src="znak.png" width="80px"></a>
+    <a class="znak1" href="kwerenda.txt">Pobierz dokumenty</a>
+
     </div>
+    <section>
     <div class="prawy">
         <img class="samochod, samochod1" src="samochod.png">
     </div>
@@ -29,6 +32,7 @@
         <br>
 	<button onclick="liczenie()">Oblicz</button>
 <br>
+</section>
 	<div id = "wys">
 </div>
     </div>
@@ -51,7 +55,7 @@ function liczenie()
 		           wynik = 0
                 //nie pamiętam jak się to rozbijało na mniejsze
   
-                wys.innerText = "koszt paliwa: " + wynik + " franków"; 
+                wys.innerText = "koszt paliwa: " + wynik + " zł"; 
              }
     </script>
 
