@@ -10,7 +10,7 @@ body{
     font-size: 150%;
 }
 
-.stopka
+.footer
 {
     color: white;
     background-color: rgb(120, 0, 46);
@@ -28,7 +28,7 @@ body{
     text-align: left;
 }
 
-.lewy
+.left
 {
     background-color: snow;
     color: olivedrab;
@@ -38,7 +38,7 @@ body{
     float: left;
 }
 
-.prawy
+.right
 {
     background-color: rgb(173, 20, 87);
     width: 40%;
@@ -60,12 +60,12 @@ td {
     text-align: center;
 }
 
-.samochod
+.car
 {
     margin:40px;
     padding: 10px;
 }
-.samochod1:hover{
+.car1:hover{
     border-style: dotted;
     border-width: 1px;
     border-color: yellowgreen;
