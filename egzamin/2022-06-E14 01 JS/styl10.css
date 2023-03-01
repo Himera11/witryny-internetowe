@@ -3,20 +3,16 @@ body
     font-family: Helvetica;
 }
 
-.blokgora1{
-    background-color: rgb(146, 184, 112);
-    text-align: center;
-    width: 50%;
-    height: 170px;
+section
+{
+    display: flex;
 }
 
-.blokgora2{
+.blokgora1, .blokgora2{
     background-color: rgb(146, 184, 112);
     text-align: center;
     width: 50%;
     height: 170px;
-    display: flex;
-    float: right;
 }
 
 .baner{
@@ -27,7 +23,7 @@ body
     padding: 5px;
 }
 
-.stopka{
+footer{
     background-color: rgb(100, 61, 49);
     color: white;
     text-align: center;
@@ -39,6 +35,7 @@ body
     background-color: rgb(146, 184, 112);
     width: 50%;
     height: 450px;
+    float: left;
 }
 
 .blokmain2{
@@ -49,14 +46,23 @@ body
 }
 
 table, td{
-    border-style: dotted;
+    border-style: dashed;
     border-width: 2px;
     border-color: green;
+    padding: 20px;
     margin: 30px;
 }
 
-.naglowek{
-    word-spacing: 20px;
+h1{
+    letter-spacing: 20px;
     font-size: 250%;
+}
+
+.zamowienie{
+    background-image: url(cukierki1.jpg);
+    padding-right: 30px;
+    padding-bottom: 120px;
+    font-size: 150%;
+    text-decoration: none;
 }
 

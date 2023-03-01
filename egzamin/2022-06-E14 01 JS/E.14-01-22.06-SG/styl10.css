@@ -1,25 +1,22 @@
 body
 {
+    margin: 0%;
     font-family: Helvetica;
 }
 
-.blokgora1{
-    background-color: rgb(146, 184, 112);
-    text-align: center;
-    width: 60%;
-    height: 170px;
-}
-
-.blokgora2{
+.blokgora1,.blokgora2{
     background-color: rgb(146, 184, 112);
     text-align: center;
     width: 50%;
     height: 170px;
+}
+
+section{
     display: flex;
-    float: right;
+    flex-direction: row-reverse;
 }
 
-.baner{
+.stopka, .baner{
     background-color: rgb(100, 61, 49);
     color: white;
     text-align: center;
@@ -27,25 +24,10 @@ body
     padding: 5px;
 }
 
-.stopka{
-    background-color: rgb(100, 61, 49);
-    color: white;
-    text-align: center;
-    height: 80px;
-    padding: 5px;
-}
-
-.blokmain1{
+.blokmain1,.blokmain2{
     background-color: rgb(146, 184, 112);
     width: 50%;
     height: 450px;
-}
-
-.blokmain2{
-    background-color: rgb(146, 184, 112);
-    width: 50%;
-    height: 450px;
-    float: right;
 }
 
 table, td{
@@ -59,4 +41,10 @@ table, td{
     word-spacing: 20px;
     font-size: 250%;
 }
-
+.zamowienie
+{
+    padding-right: 30px;
+    padding-bottom: 120px;
+    font-size: 150px;
+    text-decoration: none;
+}

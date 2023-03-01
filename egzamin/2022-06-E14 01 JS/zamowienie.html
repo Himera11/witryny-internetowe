@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <meta charset="utf-8">
+<head>
+    <link rel="stylesheet" href="styl10.css"/>
+    <title>
+        Fabryka cukierków
+    </title>
+</head>
+<body>
+<section>
+    <div class="blokgora1">
+        <a class="zamowienie" href="">zamów cukierki</a>
+    </div>
+    <div class="blokgora2">
+        <a href="index.html"><img src="logotyp.png" alt="Nasze logo"></a>
+    </div>
+</section>
+    <div class="baner">
+        <h1>Strefa zamówień</h1>
+    </div>
+<section>
+    <div class="blokmain1">
+        Numer kształtu
+        <br>
+        <input type="number" id="ksztalt">
+        <br>
+        Skomponuj swój kolor, podaj RGB
+        <br>
+        R: <input type="number" id="kolorR"> G: <input type="number" id="kolorG"> B: <input type="number" id="kolorB">
+        <br>
+        <button onclick="ksztalt(), kolor()">zamowienie</button>
+        <br>
+        <br>
+        <a id="wys">Twoje zamówienie</a>
+        <br>
+        <br>
+        <button id="kolorbutton">Kolor</button>
+    </div>
+    <div class="blokmain2">
+        <h2>Nasza oferta</h2>
+        <table>
+            <tr><td>kształty</td><td rowspan="2">Możesz zamówić <br>dowolny kolor cukierka</td><tr><td><ol><li>cytryna</li><li>liść</li><li>banan</li></ol></tr>
+
+        </table>
+    </div>
+</section>
+<footer>
+    Autor <b>Damian Manecki</b>
+</footer>
+    <script>
+        function ksztalt()
+        {
+            let ksztalt = document.getElementById("ksztalt").value 
+            let wys = document.getElementById("wys")
+            var odp 
+            if(ksztalt == 1)
+                odp = "cytryna"
+            else if(ksztalt == 2)
+                odp = "liść"
+            else if(ksztalt == 3)
+                odp = "banan"
+            else if(ksztalt != 3 && ksztalt !=2 && ksztalt != 1)
+                odp = "inny"
+
+            wys.innerText = "Twoje zamówienie to cukierek " + odp; 
+        }
+        function kolor()
+        {
+            let kolorR = document.getElementById("kolorR").value
+            let kolorG = document.getElementById("kolorG").value    
+            let kolorB = document.getElementById("kolorB").value
+            let kolorbutton = document.getElementById("kolorbutton").style.backgroundColor = 'rgb(' + kolorR + ',' + kolorB + ',' + kolorG + ')';
+        }
+    </script>
+</body>
+</html>
