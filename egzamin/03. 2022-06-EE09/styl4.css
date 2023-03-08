@@ -1,0 +1,72 @@
+body
+{
+    font-family: Verdana;
+    text-align: center;
+}
+section
+{
+    display: flex;
+}
+.baner
+{
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+
+.left
+{
+    background-color: palegreen;
+    width: 30%;
+    height: 500px;
+}
+
+.right
+{
+    background-color: honeydew;
+    width: 70%;
+    height: 500px;
+    padding-top: 100px;
+    float: right;
+}
+
+.stopka
+{
+    background-color: palegreen;
+    padding: 3px;
+}
+
+table, td
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: darkgreen;
+    border-collapse: collapse;
+}
+
+table
+{
+    margin: auto;
+    width: 95%;
+}
+
+td, th
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+button
+{
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+
+button:hover
+{
+    background-color: honeydew;
+    color: darkgreen;
+}
