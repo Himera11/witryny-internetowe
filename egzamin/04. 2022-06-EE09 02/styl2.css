@@ -1,0 +1,56 @@
+body{
+    font-family: Helvetica;
+    background-color: linen;
+    color: #222;
+    margin: auto;
+    width: 90%;
+}
+section{
+    display: flex;
+}
+
+.baner, .baner2{
+    background-color: black;
+    color: white;
+    width: 50%;
+    height: 100px;
+}
+
+.glowny{
+    padding: 20px;
+}
+
+.stopka{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+table{
+    margin: 40px;
+}
+
+td{
+    padding: 30px; 
+    text-align: center;
+    font-weight: bold;
+}
+
+.odnosnik{
+    color: #aaa;
+    text-decoration: none;
+}
+
+.odnosnik:hover{
+    color: white;
+}
+
+li {
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: white;
+}
