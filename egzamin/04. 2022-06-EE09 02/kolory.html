@@ -42,24 +42,17 @@
     <div class="stopka">
         Damian Manecki
     </div>
-    
+</body>
     <script>
         function gen_palete()
         {
             let kolors = document.getElementById("kolor").value
             let H = kolors
-            let kolors_glowny = document.getElementById("kolor_glowny")
-            let kolors2 = document.getElementById("kolor2")
-            let kolors3 = document.getElementById("kolor3")
-            let kolors4 = document.getElementById("kolor4")
-            let kolors5 = document.getElementById("kolor5")
-            
-            kolors_glowny.style.backgroundColor = "hsl( "+ H + "100%, 50%)"
-            kolors2.style.backgroundColor = "hsl( "+ H + "80%, 50%)"
-            kolors3.style.backgroundColor = "hsl( "+ H + "60%, 50%)"
-            kolors4.style.backgroundColor = "hsl( "+ H + " 40%, 50%)"
-            kolors5.style.backgroundColor = "hsl( "+ H +"  20%, 50%)"
+            let kolors_glowny = document.getElementById("kolor_glowny").style.backgroundColor = "hsl( "+ H + ",100%, 50%)"
+            let kolors2 = document.getElementById("kolor2").style.backgroundColor = "hsl( "+ H + ",80%, 50%)"
+            let kolors3 = document.getElementById("kolor3").style.backgroundColor = "hsl( "+ H + ",60%, 50%)"
+            let kolors4 = document.getElementById("kolor4").style.backgroundColor = "hsl( "+ H + ", 40%, 50%)"
+            let kolors5 = document.getElementById("kolor5").style.backgroundColor = "hsl( "+ H +",  20%, 50%)"
         }
     </script>
-</body>
 </html>
