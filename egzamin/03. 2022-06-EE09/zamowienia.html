@@ -20,10 +20,10 @@
     <div class="right">
         <table>
             <tr><th>Produkt</th><th>Jednostka</th><th>Dostępna ilość</th><th>Aktualizacja</th><th>Zamówienie</th></tr>
-            <tr><td>Skrętka U/UTP drut</td><td>metr</td><td>20</td><td><button>Aktualizacja</button></td><td><button>Zamów</button></td></tr>
-            <tr><td>Skrętka U/UTP linka</td><td>metr</td><td>2</td><td><button>Aktualizacja</button></td><td><button>Zamów</button></td></tr>
-            <tr><td>Wtyki 8P8C</td><td>sztuki</td><td>10</td><td><button>Aktualizacja</button></td><td><button>Zamów</button></td></tr>
-            <tr><td>Moduły Keystone</td><td>sztuki</td><td>30</td><td><button>Aktualizacja</button></td><td><button>Zamów</button></td></tr>
+            <tr><td id="nazwa1">Skrętka U/UTP drut</td><td>metr</td><td id="ilosc1">20</td><td><button onclick="update('ilosc1')">Aktualizacja</button></td><td><button onclick="zamow('nazwa1')">Zamów</button></td></tr>
+            <tr><td id="nazwa2">Skrętka U/UTP linka</td><td>metr</td><td id="ilosc2">2</td><td><button onclick="update('ilosc2')">Aktualizacja</button></td><td><button onclick="zamow('nazwa2')">Zamów</button></td></tr>
+            <tr><td id="nazwa3">Wtyki 8P8C</td><td>sztuki</td><td id="ilosc3">10</td><td><button onclick="update('ilosc3')">Aktualizacja</button></td><td><button onclick="zamow('nazwa3')">Zamów</button></td></tr>
+            <tr><td id="nazwa4">Moduły Keystone</td><td>sztuki</td><td id="ilosc4">30</td><td><button onclick="update('ilosc4')">Aktualizacja</button></td><td><button onclick="zamow('nazwa4')">Zamów</button></td></tr>
         </table>
     </div>
 </section>
@@ -37,6 +37,67 @@
     </div>
 
     <script>
+        braki()
+        let id_zamowienia = 0
+        function braki()
+        {
+            let tabela1 = document.getElementById("ilosc1").innerHTML
+            let tabela2 = document.getElementById("ilosc2").innerHTML
+            let tabela3 = document.getElementById("ilosc3").innerHTML
+            let tabela4 = document.getElementById("ilosc4").innerHTML
+
+            if(tabela1 == 0)
+            {
+                tabela1 = document.getElementById("ilosc1").style.backgroundColor = "red";
+            }
+            else if(tabela1 >= 1 && tabela1 <= 5)
+            {
+                tabela1 = document.getElementById("ilosc1").style.backgroundColor = "yellow";
+            }
+
+            if(tabela2 == 0)
+            {
+                tabela2 = document.getElementById("ilosc2").style.backgroundColor = "red";
+            }
+            else if(tabela2 >= 1 && tabela2 <= 5)
+            {
+                tabela2 = document.getElementById("ilosc2").style.backgroundColor = "yellow";
+            }
+
+            if(tabela3 == 0)
+            {
+                tabela3 = document.getElementById("ilosc3").style.backgroundColor = "red";
+            }
+            else if(tabela3 >= 1 && tabela3 <= 5)
+            {
+                tabela4 = document.getElementById("ilosc3").style.backgroundColor = "yellow";
+            }
+
+            if(tabela4 == 0)
+            {
+                tabela4 = document.getElementById("ilosc4").style.backgroundColor = "red";
+            }
+            else if(tabela4 >= 1 && tabela4 <= 5)
+            {
+                tabela4 = document.getElementById("ilosc4").style.backgroundColor = "yellow";
+            }
+        }
+
+        function update(iloscid)
+        {
+            let zmiana = prompt("Podaj nową ilość:")
+            document.getElementById(iloscid).innerHTML = zmiana
+            braki()
+        }
+
+        function zamow(nazwaid)
+        {
+            id_zamowienia = id_zamowienia + 1
+            let nazwa = document.getElementById(nazwaid).innerHTML;
+            alert("Zamówienie nr: " + id_zamowienia + " Produkt: " + nazwa);
+        }
+
+
         
     </script>
 </body>
