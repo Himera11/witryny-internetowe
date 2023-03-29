@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" href="styl.css"/>
+    <meta charset="UTF-8">
+    <title>
+        Usługi kosmetyczne
+    </title>
+</head>
+<body>
+    <div class="lewy1">
+        <h2>W ofercie</h2>
+        <ul (unordered)>
+            <li>
+                <a href="twarz.html">Zabiegu na twarz</a>
+            </li>
+                <ol>
+                    <li>
+                        Piling
+                    </li>
+                    <li>
+                        Maska
+                    </li>
+                    <li>
+                        Regulacja brwi
+                    </li>
+                </ol>
+                <li>
+                    Masaż
+                </li>
+                <li>
+                    Diety oczyszczające
+                </li>
+        </ul>
+        <a href="index.html">Do strony głownej</a>
+    </div>
+    <div class="prawy1">
+        <h1>Salon kosmetyczny</h1>
+    </div>
+
+    <div class="prawy2">
+        <h2>Sprawdź cenę swojej wizyty</h2>
+        <ul>
+                <input id="Piling" type="checkbox"> Piling 
+                <br>
+                <input id="Maska" type="checkbox"> Maska 
+                <br>
+                <input id="Masaz" type="checkbox"> Masaż twarzy 
+                <br>
+                <input id="Regulacja" type="checkbox"> Regulacja brwi
+                <br>
+                <button onclick="cena()">Sprawdź cenę</button>
+                <br>
+                <br>
+                <a id="tu"></a>
+        </ul>
+    </div>
+    <div class="lewy2">
+        <img src="obraz1.jpg" alt="Kosmetyczka">
+    </div>
+    <div class="stopka">
+        <p>Autor: Damian Manecki</p>
+    </div>
+    <script>
+        function cena()
+        {
+            let piling = document.getElementById("Piling").checked
+            let maska = document.getElementById("Maska").checked
+            let masaz = document.getElementById("Masaz").checked
+            let regulacja = document.getElementById("Regulacja").checked
+
+            let cena = 0
+
+            if(piling)
+            cena = cena + 45
+            if(maska)
+            cena = cena + 30
+            if(masaz)
+            cena = cena + 20
+            if(regulacja)
+            cena = cena + 5
+            let wys = document.getElementById("tu")
+            wys.innerHTML = ("Cena zabiegów: " + cena)
+        }
+    </script>
+</body>
+</html>
