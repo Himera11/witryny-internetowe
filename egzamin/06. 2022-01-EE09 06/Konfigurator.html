@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" href="styl6.css"/>
+    <title>
+        Style w JavaScript
+    </title>
+</head>
+<body>
+    <section>
+        
+        <div class="prawy" id="prawy">
+            <img src="gibraltar.jpg" alt="półwysep Gibraltar">
+            <ul>
+                <li>
+                    element 1
+                </li>
+                <li>
+                    element 2
+                </li>
+                <li>
+                    element 3
+                </li>
+            </ul>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            </p>
+        </div>
+        <div class="lewy">
+            <h1>
+                Konfigurator stylu
+            </h1>
+            <p>
+                Podaj kolor tła
+            </p>
+            <button id="Indigo" onclick="tlo('Indigo')">
+                Indigo
+            </button>
+            <button id="SteelBlue" onclick="tlo('SteelBlue')">
+                SteelBlue
+            </button>
+            <button id="Olive" onclick="tlo('Olive')">
+                Olive
+            </button>
+            <p>
+                Podaj kolor czcionki
+            </p>
+            <select name="lista" id="lista">
+                <option value="white" id="white" onchange="czcionka('white')">White</option>
+                <option value="tan" id="tan" onchange="czcionka('tan')">Tan</option>
+                <option value="bisque" id="bisque" onchange="czcionka('bisque')">Bisque</option>
+                <option value="plum" id="plum" onchange="czcionka('plum')">Plum</option>
+            </select>
+            <p>
+                Podaj rozmiar czcionki w procentach, np. 200%
+            </p>
+            <br>
+            <input type="text" value="100%">
+            <p>
+                Czy rysunek ma mieć ramkę?
+            </p>
+            <input type="checkbox" checked>Rysuj ramkę
+            <p>
+                Jaki jest typ punktora lsity?
+            </p>
+            <input type="radio" checked name="lista">dysk
+            <input type="radio" name="lista">kwadrat
+            <input type="radio" name="lista">okrąg
+        </div>
+    </section>
+    <div class="stopka">
+        Autor: Damian Manecki
+    </div>
+
+
+    <script>
+        function tlo(kolor)
+        {
+            document.getElementById("prawy").style.background = document.getElementById(kolor).innerHTML
+        }
+
+        function czcionka(czcionkakolor)
+        {
+            document.getElementById("prawy").style.color = document.getElementById(czcionkakolor).innerHTML
+        }
+    </script>
+</body>
+</html>
