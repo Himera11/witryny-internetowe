@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" href="styl7.css"/>
+    <title>
+        Galeria
+    </title>
+</head>
+<body>
+    <div class="baner">
+        <h2>Galeria miejsc ciekawych</h2>
+    </div>
+    <div class="glowny">
+        <img class="imgmain" id="zmiana" src="lanzarotte.jpg" alt="galeria">
+    </div>
+
+<section>
+    <div class="prawy">
+        <h3>Obrazy w naszej galerii</h3>
+
+        <table>
+            <tr><td>Europa</td><td>Azja</td><td>Afryka</td></tr>
+            <tr><td>2</td><td>2</td><td>1</td></tr>
+        </table>
+        <p>Polub nas</p>
+        <img id="icon" onclick="icon()" src="icon-off.png">
+        <br>
+        <a href="https://pixabay.com">Odkryj więcej zdjęć</a>
+    </div>
+    <div class="lewy">
+        <h3>Przeglądaj zdjęcia</h3>
+        <img class="imgreszta" src="lanzarotte.jpg" alt="lanzarotte" onclick="zmianazdj('lanzarotte.jpg')">
+        <img class="imgreszta" src="pekin.jpg" alt="pekin"onclick="zmianazdj('pekin.jpg')">
+        <img class="imgreszta" src="serengeti.jpg" alt="serengeti" onclick="zmianazdj('serengeti.jpg')">
+        <img class="imgreszta" src="wenecja.jpg" alt="wenecja" onclick="zmianazdj('wenecja.jpg')">
+        <img class="imgreszta" src="tajlandia.jpg" alt="tajlandia" onclick="zmianazdj('tajlandia.jpg')">
+    </div>
+</section>
+    <div class="stopka">
+        Autor: Damian Manecki
+    </div>
+    <script>
+        function zmianazdj(zdjecia){
+            let Zmiana = document.getElementById("zmiana")
+            Zmiana.src = zdjecia
+        }
+
+        function icon()
+        {
+            let Icon = document.getElementById("icon")
+            if(Icon.src = "icon-off.png")
+                Icon.src = "icon-on.png"
+
+            
+            if(Icon.src = "icon-on.png")
+                Icon.src = "icon-off.png"
+        }
+
+    </script>
+</body>
+</html>
