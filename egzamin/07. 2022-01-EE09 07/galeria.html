@@ -23,7 +23,7 @@
             <tr><td>2</td><td>2</td><td>1</td></tr>
         </table>
         <p>Polub nas</p>
-        <img id="icon" onclick="icon()" src="icon-off.png">
+        <img id="icon" src="icon-off.png" alt="off" onclick="icon()">
         <br>
         <a href="https://pixabay.com">Odkryj więcej zdjęć</a>
     </div>
@@ -47,13 +47,17 @@
 
         function icon()
         {
-            let Icon = document.getElementById("icon")
-            if(Icon.src = "icon-off.png")
-                Icon.src = "icon-on.png"
-
-            
-           else if(Icon.src = "icon-on.png")
-                Icon.src = "icon-off.png"
+            let x = document.getElementById("icon").alt
+            if (x == "off") 
+            {
+                document.getElementById("icon").alt = "on"
+                document.getElementById("icon").src = "icon-on.png"
+            }
+            else
+            {
+                document.getElementById("icon").alt = "off"
+                document.getElementById("icon").src = "icon-off.png"
+            }
         }
 
     </script>
