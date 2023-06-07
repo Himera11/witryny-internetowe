@@ -59,7 +59,7 @@ function checkWinner()
     let box2 = boardState[wincombo[1]]
     let box3 = boardState[wincombo[2]]
 
-    if (box1 != null && box1 === box2 && box1 === box3)     
+    if (box1 != null && box1 === box2 && box2 === box3)     
     {
       gamewon = true
       gamerun = false
