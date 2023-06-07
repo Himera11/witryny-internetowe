@@ -70,11 +70,13 @@ function checkdraw()
 {
     let draw = false
     for(i = 0; i < 10; i++)
+{
         if(boardState[i] != null)
-             draw = true
-        gamerun = false
-        gameover()
-
+             draw = false
+}
+    draw = true
+    gamerun = false
+    gameover()
 }
 
   function gameover()
