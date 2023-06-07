@@ -23,7 +23,7 @@ function bloxclick(event)
   }
 
   let box = event.target
-  let boxnum = box.dataset.index
+  let boxnum = box.dataset.id
   if (box.innerText != "") 
   {
     return
