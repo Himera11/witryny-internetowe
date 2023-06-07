@@ -30,7 +30,7 @@ function bloxclick(event)
     return
   }
 
-  if (currentturn === playerx) 
+  if (currentturn = playerx) 
   {
     box.innerText = playerx
     boardState[boxnum] = playerx
