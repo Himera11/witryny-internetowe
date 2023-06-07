@@ -71,7 +71,7 @@ function checkdraw()
     let draw = false
     for(i = 0; i < 10; i++)
 {
-        if(boardState[i] != null)
+        if(boardState[i] == null)
              draw = false
 }
     draw = true
