@@ -3,8 +3,7 @@ let playerx = "X"
 let playero = "O"
 let currentturn = playerx
 let gamerun = true
-let gamewon = false
-let draw = false
+let gamewon = false
 
 let boardState = Array(boxes.length)
 boardState.fill(null)
@@ -64,12 +63,18 @@ function checkWinner()
     }
   }
 
-  let alldone = boardState.every((box) => box !== null)
-  if (alldone) {
-    draw = true
-    gamerun = false
-    gameover()
-  }
+  checkdraw()
+}
+
+function checkdraw()
+{
+    let draw = false
+    for(i = 0; i < 10; i++)
+        if(boardState[i] != null)
+             draw = true
+        gamerun = false
+        gameover()
+
 }
 
   function gameover()
