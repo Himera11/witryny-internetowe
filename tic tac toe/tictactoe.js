@@ -4,8 +4,7 @@ let playero = "O"
 let currentturn = playerx
 let gamerun = true
 let gamewon = false
-let tury = 0
-var draw = false
+let tury = 0
 
 let boardState = Array(boxes.length)
 boardState.fill(null)
