@@ -1,36 +1,38 @@
-let boxes = document.querySelectorAll(".box")
-let playerx = "X"
-let playero = "O"
+const boxes = document.querySelectorAll(".box")
+const playerx = "X"
+const playero = "O"
 let currentturn = playerx
 let gamerun = true
 let gamewon = false
-let tury = 0
+let tury = 0
+var draw = false
+let Xwin = 0
+let Ywin = 0
+licznik()
 
 let boardState = Array(boxes.length)
 boardState.fill(null)
 
-let over = document.getElementById("over")
-let winneris = document.getElementById("winner")
-let playAgain = document.getElementById("play-again")
+const over = document.getElementById("over")
+const winneris = document.getElementById("winner")
 
 let wincombos = [[0, 1, 2],[3, 4, 5],[6, 7, 8],[0, 3, 6],[1, 4, 7],[2, 5, 8],[0, 4, 8],[2, 4, 6]]
 
-boxes.forEach((box) => box.addEventListener("click", bloxclick))
-
-function bloxclick(event) 
+boxes.forEach((box) => box.addEventListener("click", () => 
 {
-  if (!gamerun) {
+  let boxnum = box.dataset.id
+
+  if (!gamerun) 
+  {
     return
   }
 
-  let box = event.target
-  let boxnum = box.dataset.id
   if (box.innerText != "") 
   {
     return
   }
 
-  if (currentturn = playerx) 
+  if (currentturn == playerx) 
   {
     box.innerText = playerx
     boardState[boxnum] = playerx
@@ -40,14 +42,13 @@ function bloxclick(event)
   } 
   else 
   {
-    box.innerTextp = playero
+    box.innerText = playero
     boardState[boxnum] = playero
     tury++
     checkWinner()
     currentturn = playerx
   }
-
-}
+}))
 
 function checkWinner() 
 {
@@ -68,16 +69,34 @@ function checkWinner()
 }
 
 
-  function gameover()
+function gameover()
   {
     if (gamewon) {
         winneris.innerText = "winner is " + currentturn
+        if(currentturn == 'X')
+          Xwin++
+        else
+          Ywin++
+        licznik()
+
     }
     else if(tury == 9)
         winneris.innerText = "Draw"
   }
 
-function startNewGame() 
+  function licznik()
+  {
+      let licznik = document.getElementById("licznik").innerHTML = "wygrane X = " + Xwin + ", wygrane O = " + Ywin
+  }
+
+  function winreset()
+  {
+      Xwin = 0
+      Ywin = 0
+      licznik()
+  }
+
+function reset() 
 {
   boardState.fill(null)
   boxes.forEach((box) => (box.innerText = ""))
@@ -104,5 +123,5 @@ function plcolor()
     let plb = document.getElementById("kolorplb").value
     let plc = document.getElementById("kolorplc").value
 
-    document.getElementById("box") = 'rgb(' + pla + ',' + plb + ',' + plc + ')'
+    document.getElementById("box").style.backgroundColor = 'rgb(' + pla + ',' + plb + ',' + plc + ')'
 }

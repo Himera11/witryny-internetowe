@@ -10,17 +10,18 @@
     {
         text-align: center;
     }
-    .board{
+    .board
+    {
         display: grid;
         grid-template-columns: repeat(3, auto);
         width: 300px;
         height: 300px;
         margin: 50px auto;
     }
-    .box{
+    .box
+    {
         width: 100px;
         height: 100px;
-        box-shadow: 0 0 0 1px #333333;
         border: 1px solid #333333;
         line-height: 90px;
         font-size: 80px;
@@ -29,23 +30,22 @@
 
     }
 
-    .reset{
+    .reset
+    {
         margin: 20px;
         padding: 5px;
         border-style: solid;
         background-color: rgb(88, 252, 12);
     }
 
-    .hidden {
-        visibility: hidden;
-    }
-
-    .visible {
-        visibility: visible;
-    }
-    .kolorbg{
+    .kolorbg
+    {
         width: 30%;
         float: left;
+    }
+    .over
+    {
+        padding: 100%;
     }
     </style>
 <body>
@@ -80,13 +80,20 @@
           <div data-id="7" class="box"></div>
           <div data-id="8" class="box"></div>
           <br>
-          <button id="play-again" class="reset" onclick="startNewGame()">restart</button>
+          <button class="reset" onclick="reset()">restart</button>
+          
+
+          <button class="reset" onclick="winreset()">reset wygranych</button>
+        <br>
         <br>
     </div>
-
-            <div id="over">
-                <h2 id="winner"></h2>
-              </div>
+    <br>
+        <div id="over">
+            <h2 id="winner"></h2>
+        </div>
+        <div id="licznik">
+            
+        </div>
 
     <script src="tictactoe.js"></script>
 </body>
