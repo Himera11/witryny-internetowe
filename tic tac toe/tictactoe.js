@@ -3,7 +3,9 @@ let playerx = "X"
 let playero = "O"
 let currentturn = playerx
 let gamerun = true
-let gamewon = false
+let gamewon = false
+let tury = 0
+var draw = false
 
 let boardState = Array(boxes.length)
 boardState.fill(null)
@@ -18,7 +20,7 @@ boxes.forEach((box) => box.addEventListener("click", bloxclick))
 
 function bloxclick(event) 
 {
-  if (gamerun != true) {
+  if (!gamerun) {
     return
   }
 
@@ -33,13 +35,15 @@ function bloxclick(event)
   {
     box.innerText = playerx
     boardState[boxnum] = playerx
+    tury++
     checkWinner()
     currentturn = playero
   } 
   else 
   {
-    box.innerText = playero
+    box.innerTextp = playero
     boardState[boxnum] = playero
+    tury++
     checkWinner()
     currentturn = playerx
   }
@@ -59,32 +63,18 @@ function checkWinner()
     {
       gamewon = true
       gamerun = false
-      gameover()
     }
   }
-
-  checkdraw()
-}
-
-function checkdraw()
-{
-    let draw = false
-    for(i = 0; i < 10; i++)
-{
-        if(boardState[i] == null)
-             draw = false
-}
-    draw = true
-    gamerun = false
     gameover()
 }
 
+
   function gameover()
   {
-    if (gamewon = true) {
+    if (gamewon) {
         winneris.innerText = "winner is " + currentturn
     }
-    else if(draw = true)
+    else if(tury == 9)
         winneris.innerText = "Draw"
   }
 
@@ -95,6 +85,8 @@ function startNewGame()
   currentturn = playerx;
   winneris.innerText = ""
   gamerun = true
+  gamewon = false
+  tury = 0
 }
 
 
