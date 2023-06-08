@@ -32,7 +32,7 @@ boxes.forEach((box) => box.addEventListener("click", () =>
     return
   }
 
-  if (currentturn == playerx) 
+  if (currentturn == 'X') 
   {
     box.innerText = playerx
     boardState[boxnum] = playerx
@@ -115,13 +115,4 @@ function bgcolor()
     let bgc = document.getElementById("kolorbgc").value
 
     document.body.style.backgroundColor = 'rgb(' + bga + ',' + bgb + ',' + bgc + ')'
-}
-
-function plcolor()
-{
-    let pla = document.getElementById("kolorpla").value
-    let plb = document.getElementById("kolorplb").value
-    let plc = document.getElementById("kolorplc").value
-
-    document.getElementById("box").style.backgroundColor = 'rgb(' + pla + ',' + plb + ',' + plc + ')'
 }
