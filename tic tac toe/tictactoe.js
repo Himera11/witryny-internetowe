@@ -38,7 +38,7 @@ boxes.forEach((box) => box.addEventListener("click", () =>
     boardState[boxnum] = playerx
     tury++
     checkWinner()
-    currentturn = playero
+    playerturn()  
   } 
   else 
   {
@@ -46,9 +46,14 @@ boxes.forEach((box) => box.addEventListener("click", () =>
     boardState[boxnum] = playero
     tury++
     checkWinner()
-    currentturn = playerx
+    playerturn()
   }
 }))
+
+function playerturn()
+{
+  currentturn = currentturn === playerx ? playero : playerx
+}
 
 function checkWinner() 
 {
