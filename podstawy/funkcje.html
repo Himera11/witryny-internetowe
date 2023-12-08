@@ -38,4 +38,56 @@
 </body>
 </html>
 
+Metoda połowienia (bisekcji) polega na dzieleniu przedziału, w którym znajduje się miejsce zerowe, na pół i sprawdzaniu, po której stronie miejsca zerowego znajduje się nowy przedział. Oto algorytm metody połowienia w kontekście znajdowania miejsca zerowego funkcji:
 
+1. Wybierz przedział początkowy [a, b], w którym znajduje się miejsce zero (funkcja zmienia znak między a i b).
+2. Oblicz środek przedziału: \( c = \frac{a + b}{2} \).
+3. Oblicz wartość funkcji w punkcie środkowym: \( f(c) \).
+4. Sprawdź, czy \( f(c) \) jest dostatecznie bliskie zeru (czy \( |f(c)| \) jest mniejsze niż zadana tolerancja).
+   - Jeśli tak, zakończ algorytm i zwróć \( c \) jako przybliżone miejsce zero.
+   - W przeciwnym razie, sprawdź, po której stronie środka przedziału znajduje się miejsce zero (czy \( f(a) \cdot f(c) < 0 \) czy \( f(b) \cdot f(c) < 0 \)).
+      - Jeśli \( f(a) \cdot f(c) < 0 \), nowy przedział to [a, c].
+      - Jeśli \( f(b) \cdot f(c) < 0 \), nowy przedział to [c, b].
+5. Powtarzaj kroki 2-4, aż zostanie osiągnięta żądana tolerancja lub liczba iteracji przekroczy określony limit.
+
+Poniżej znajdziesz prostą implementację w PHP tego algorytmu dla konkretnej funkcji:
+
+```php
+function bisectionMethod($function, $a, $b, $tolerance = 0.0001, $maxIterations = 100) {
+    // Sprawdź, czy funkcja zmienia znak między a i b
+    if ($function($a) * $function($b) >= 0) {
+        echo "Nie można zastosować metody bisekcji w podanym przedziale.";
+        return;
+    }
+
+    // Iteracyjnie stosuj metodę bisekcji
+    for ($i = 0; $i < $maxIterations; $i++) {
+        // Oblicz środek przedziału
+        $c = ($a + $b) / 2;
+
+        // Sprawdź, czy osiągnięto zadoloną tolerancję
+        if (abs($function($c)) < $tolerance) {
+            echo "Miejsce zero: $c";
+            return;
+        }
+
+        // Zaktualizuj przedział
+        if ($function($a) * $function($c) < 0) {
+            $b = $c;
+        } else {
+            $a = $c;
+        }
+    }
+
+    echo "Nie udało się znaleźć miejsca z zerowego w określonej liczbie iteracji.";
+}
+
+// Przykład użycia
+$function = function($x) {
+    return $x**2 - 4; // Równanie x^2 - 4 = 0
+};
+
+bisectionMethod($function, 0, 3);
+```
+
+W przykładowym kodzie funkcja `bisectionMethod` przyjmuje funkcję, przedział początkowy [a, b], tolerancję oraz maksymalną liczbę iteracji. Przykładowa funkcja to \(f(x) = x^2 - 4\), a przedział początkowy to [0, 3].
